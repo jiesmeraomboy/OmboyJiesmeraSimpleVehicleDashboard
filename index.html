@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vehicle Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>🚗 Vehicle Dashboard</h1>
+    <p class="subtitle">JavaScript Modularization • Week 9</p>
+  </header>
+
+  <main class="container">
+    <section class="dashboard-card">
+      <div class="display glass">
+        <h2>Performance Monitor</h2>
+
+        <div class="dial-wrapper">
+          <div class="speed-dial">
+            <div class="needle" id="needle"></div>
+            <div class="center-cap"></div>
+            <div class="dial-label">km/h</div>
+          </div>
+        </div>
+
+        <div class="lcd">
+          <div class="row"><span>Speed:</span> <strong id="speedValue">0</strong> km/h</div>
+          <div class="row"><span>Fuel:</span> <strong id="fuelValue">100</strong>%</div>
+          <div class="row"><span>Status:</span> <strong id="engineStatus">OFF</strong></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="btnEngine" class="btn engine-btn">Start Engine</button>
+        <button id="btnAccel" class="btn accent">Accelerate</button>
+        <button id="btnBrake" class="btn">Brake</button>
+        <button id="btnRefuel" class="btn">Refuel</button>
+      </div>
+
+      <p id="toast" class="toast" hidden></p>
+    </section>
+  </main>
+
+  <footer>
+    <small>BSIT 4B • Cross Platform Script Dev • Modular JS Dashboard</small>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
