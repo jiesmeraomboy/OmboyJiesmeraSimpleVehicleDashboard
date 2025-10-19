@@ -1,0 +1,207 @@
+:root {
+  --bg: #0a0f1d;
+  --card: #101727;
+  --line: #243356;
+  --accent: linear-gradient(135deg, #00aaff, #0077ff);
+  --text: #eaf1ff;
+  --muted: #9fb1ce;
+  --success: #27e0a1;
+  --danger: #ff5d5d;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #0f1a33 0%, #070b17 100%);
+  color: var(--text);
+  margin: 0;
+  text-align: center;
+}
+
+.header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--line);
+  background: #0f162b;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.dashboard-card {
+  background: rgba(17, 25, 47, 0.95);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 520px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(12px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.05);
+}
+
+h2 {
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+}
+
+.dial-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.speed-dial {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #1a2a4f;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #0b1328 0%, #050810 100%);
+  box-shadow: inset 0 0 30px rgba(0, 170, 255, 0.1);
+}
+
+.needle {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 3px;
+  height: 80px;
+  background: #ff5d5d;
+  transform-origin: bottom center;
+  transform: rotate(-120deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.center-cap {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #eaf1ff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(111, 193, 255, 0.5);
+}
+
+.dial-label {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.lcd {
+  background: #0c1222;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 16px;
+  color: var(--text);
+  box-shadow: inset 0 0 20px rgba(0, 120, 255, 0.1);
+}
+
+.lcd .row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+.lcd strong {
+  color: var(--text);
+  font-size: 18px;
+}
+
+.controls {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #17233b;
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background: #1e2d52;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn.accent {
+  background: #1c3a69;
+  border-color: #2c5fb2;
+}
+
+.engine-btn.on {
+  background: var(--success);
+  color: #000;
+  border-color: #27e0a1;
+}
+
+.engine-btn.off {
+  background: var(--danger);
+  border-color: #ff5d5d;
+}
+
+.toast {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+footer {
+  opacity: 0.7;
+  padding: 1rem;
+  font-size: 13px;
+  border-top: 1px solid var(--line);
+}
